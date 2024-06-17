@@ -1,6 +1,7 @@
 /* 各區背景圖 */
 #gallery {
     background-image: url("../images/p0h.jpg");
+    /* background-image: url("../images/p0h.jpg"); */
 }
 
 #resume {
@@ -38,16 +39,6 @@ section {
     /* 離上面留白距離 */
     padding-top: 200px;
 }
-
-
-/* .txt-bg {
-    background-color: rgba(248, 248, 248, 0.3);
-    border-radius: 50px;
-    text-align: justify;
-    padding: 50px;
-    width: 300px;
-    margin: auto; */ */
-}  */
 
 .txt-bg h2 {
     text-align: center;
