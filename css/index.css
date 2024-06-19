@@ -12,11 +12,15 @@
     background-image: url("../images/p2h.jpg");
 }
 
-#service {
+#collection {
     background-image: url("../images/p3h.jpg");
 }
 
-#contact {
+#project {
+    background-image: url("../images/p3h.jpg");
+}
+
+#photography {
     background-image: url("../images/p4h.jpg");
 }
 

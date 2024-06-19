@@ -7,35 +7,81 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
+    <title>導覽列</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- css語法放在title下面 -->
     <link rel="stylesheet" href="./css/bootstrap-4.0.0.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./dist/css/lightbox.css">
+
+    <style>
+        /* .info {
+        overflow: hidden;
+        background-color: #a39466;
+        padding: 20px 75px;
+    } */
+
+        .info .box {
+            /* boder: 1px solid red; */
+            /* 浮動對齊左置 */
+            float: left;
+        }
+
+        .info .box img {
+            border: #8f7866 5px solid;
+            border-radius: 50%;
+            margin: 20px;
+        }
+
+        .info .box h4 {
+            text-align: center;
+            color: #7d6049;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- 導 列 -->
+    <!-- 導覽列 -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <!-- mr1-auto 靠右 , mx-auto 置中 -->
-        <!-- 捲動效果 js-scroll-trigger -->
         <a class="navbar-brand js-scroll-trigger" href="#gallery">
-            <!-- Navbar</a> -->
             <img src="./images/logoh.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- 
+                mr-auto(靠左=>預設值)
+                ml-auto(靠右)
+                mx-auto(置中)
+             -->
+            <ul class="navbar-nav ml-auto">
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link js-scroll-trigger active" href="#gallery">Gallery <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link js-scroll-trigger" href="#resume">Resume</a>
-                    <a class="nav-item nav-link js-scroll-trigger" href="#portfolios">Portfolio</a>
-                    <a class="nav-item nav-link js-scroll-trigger" href="#service">Service</a>
-                    <a class="nav-item nav-link js-scroll-trigger" href="#contact">Contact</a>
+                <li class="nav-item active">
+                    <a class="nav-link js-scroll-trigger" href="#gallery">Gallery <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#resume">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#portfolios">Portfolios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#collection">Collection</a>
+                </li>
 
-                </div>
-            </div>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#project">Project</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#photography">Photography</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <!-- 選單各區內容 -->
@@ -43,14 +89,7 @@
     <section id="gallery">
         <div class="container">
             <div class="row">
-                <!-- <div class="txt-bg">
-                    <h2>gallery</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum neque ea vero eligendi excepturi deserunt
-                        laudantium minus, expedita veritatis impedit voluptas error labore obcaecati quae velit mollitia
-                        vitae aut delectus.50</p>
-                </div> -->
             </div>
-
         </div>
     </section>
 
@@ -58,68 +97,208 @@
     <section id="resume">
         <div class="container">
             <div class="row">
-                <div class="txt-bg">
-                    <!-- <h2>resume</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum neque ea vero eligendi excepturi
-                        deserunt
-                        laudantium minus, expedita veritatis impedit voluptas error labore obcaecati quae velit mollitia
-                        vitae aut delectus.50</p>
-                    One of three columns -->
-                </div>
             </div>
         </div>
-
     </section>
 
     <!-- Portfolios -->
     <section id="portfolios">
         <div class="container">
-            <div class="row">
-                <!-- <div class="txt-bg">
-                    <h2>portfolios</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum neque ea vero eligendi excepturi
-                        deserunt
-                        laudantium minus, expedita veritatis impedit voluptas error labore obcaecati quae velit mollitia
-                        vitae aut delectus.50</p>
-                    One of three columns
-                </div> -->
-            </div>
         </div>
 
+        <!-- portfolio 資訊圖片-->
+
+        <style>
+            .info {
+                display: flex;
+                justify-content: center;
+            }
+
+            .box {
+                margin: 0 10px;
+                text-align: center;
+            }
+
+            /* .box h4 {
+                font-weight: bold;
+                color: deepskyblue;
+            } */
+        </style>
+
+        <div class="info">
+            <div class="box">
+                <a href="./img/img1L.jpg" data-lightbox="img1L" data-title="Polygen海報設計">
+                    <img src="./img/img1.jpg" alt="">
+                </a>
+                <h4>Polygen海報設計</h4>
+            </div>
+
+            <div class="box">
+                <a href="./img/img2L.jpg" data-lightbox="img2L" data-title="咖啡盒設計">
+                    <img src="./img/img2.jpg" alt="">
+                </a>
+                <h4>咖啡盒設計</h4>
+            </div>
+
+            <div class="box">
+                <a href="./img/img3L.jpg" data-lightbox="img3L" data-title="立體印章設計">
+                    <img src="./img/img3.jpg" alt="">
+                </a>
+                <h4>立體印章設計</h4>
+            </div>
+        </div>
     </section>
 
-    <!-- SERVICE -->
-    <section id="service">
+    <!-- Collection-->
+    <section id="collection">
         <div class="container">
             <div class="row">
-                <!-- <div class="txt-bg">
-                    <h2>SERVICE</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum neque ea vero eligendi excepturi deserunt
-                        laudantium minus, expedita veritatis impedit voluptas error labore obcaecati quae velit mollitia
-                        vitae aut delectus.50</p>
-                    One of three columns
-                </div> -->
+            </div>
+        </div>
+
+        <!-- portfolio 資訊圖片-->
+
+        <style>
+            .info {
+                display: flex;
+                justify-content: center;
+            }
+
+            .box {
+                margin: 0 10px;
+                text-align: center;
+            }
+        </style>
+
+        <div class="info">
+            <div class="box">
+                <a href="./img/coffeeL.jpg" data-lightbox="coffeeL" data-title="名片/咖啡杯設計">
+                    <img src="./img/coffee.jpg" alt="">
+                </a>
+                <h4>名片/咖啡杯設計</h4>
             </div>
 
+            <div class="box">
+                <a href="./img/menuL.jpg" data-lightbox="menuL" data-title="甜點MENU設計">
+                    <img src="./img/menu.jpg" alt="">
+                </a>
+                <h4>甜點MENU設計</h4>
+            </div>
+
+            <div class="box">
+                <a href="./img/bookL.jpg" data-lightbox="bookL" data-title="電子書封|書底設計">
+                    <img src="./img/book.jpg" alt="">
+                </a>
+                <h4>電子書封|書底設計</h4>
+            </div>
         </div>
+
+        <!-- Query主程式 -->
+        <script src="./dist/js/lightbox-plus-jquery.js"></script>
+        <!-- 灯箱效果主程式 -->
+        <script src="./dist/js/lightbox.js"></script>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
+    <!-- Project-->
+    <section id="project">
+        <div class="project">
+            <div class="row">
+            </div>
+        </div>
+
+        <!-- 資訊圖片-->
+
+        <style>
+            .info {
+                display: flex;
+                justify-content: center;
+            }
+
+            .box {
+                margin: 0 10px;
+                text-align: center;
+            }
+        </style>
+
+        <div class="info">
+            <div class="box">
+                <a href="./img/project-cardL.jpg" data-lightbox="project-cardL" data-title="品牌名片設計">
+                    <img src="./img/project-card.jpg" alt="">
+                </a>
+                <h4>名片/品牌名片設計</h4>
+            </div>
+
+            <div class="box">
+                <a href="./img/project-packingL.jpg" data-lightbox="project-packingL" data-title="品牌包裝袋設計">
+                    <img src="./img/project-packing.jpg" alt="">
+                </a>
+                <h4>品牌包裝袋設計</h4>
+            </div>
+
+            <div class="box">
+                <a href="./img/project-logoL.jpg" data-lightbox="project-logoL" data-title="品牌LOGO設計">
+                    <img src="./img/project-logo.jpg" alt="">
+                </a>
+                <h4>品牌LOGO設計</h4>
+            </div>
+        </div>
+
+        <!-- Query主程式 -->
+        <script src="./dist/js/lightbox-plus-jquery.js"></script>
+        <!-- 灯箱效果主程式 -->
+        <script src="./dist/js/lightbox.js"></script>
+    </section>
+
+    <!-- photography -->
+    <section id="photography">
         <div class="container">
             <div class="row">
-                <!-- <div class="txt-bg">
-                    <h2>CONTACT</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum neque ea vero eligendi excepturi deserunt
-                        laudantium minus, expedita veritatis impedit voluptas error labore obcaecati quae velit mollitia
-                        vitae aut delectus.50</p>
-                    One of three columns
-                </div> -->
             </div>
         </div>
 
-    </section>
+        <!-- portfolio 資訊圖片-->
 
+        <style>
+            .info {
+                display: flex;
+                justify-content: center;
+            }
+
+            .box {
+                margin: 0 10px;
+                text-align: center;
+            }
+        </style>
+
+        <div class="info">
+            <div class="box">
+                <a href="./img/bugL.jpg" data-lightbox="group" data-title="Summer|螢火蟲季攝影">
+                    <img src="./img/bug.jpg" alt="">
+                </a>
+                <h4>Summer|螢火蟲季攝影</h4>
+            </div>
+
+            <div class="box">
+                <a href="./img/flower2L.jpg" data-lightbox="group" data-title="Spring|武陵櫻花季攝影">
+                    <img src="./img/flower2.jpg" alt="">
+                </a>
+                <h4>Spring|武陵櫻花季攝影</h4>
+            </div>
+
+            <div class="box">
+                <a href="./img/leavesL.jpg" data-lightbox="group" data-title="Autumn|福壽山楓葉攝影">
+                    <img src="./img/leaves.jpg" alt="">
+                </a>
+                <h4>Autumn|福壽山楓葉攝影</h4>
+            </div>
+        </div>
+
+        <!-- Query主程式 -->
+        <script src="./dist/js/lightbox-plus-jquery.js"></script>
+        <!-- 灯箱效果主程式 -->
+        <script src="./dist/js/lightbox.js"></script>
+
+    </section>
 
     <!-- jquery主程式 -->
     <script src="./js/jquery-3.2.1.min.js"></script>
@@ -132,6 +311,10 @@
     <script src="./js/bootstrap-4.0.0.js"></script>
     <script src="./js/popper.min.js"></script>
 
+    <!-- Query主程式 -->
+    <script src="./dist/js/lightbox-plus-jquery.js"></script>
+    <!-- 灯箱效果主程式 -->
+    <script src="./dist/js/lightbox.js"></script>
 
 </body>
 
